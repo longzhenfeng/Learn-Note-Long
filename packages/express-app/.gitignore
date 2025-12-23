@@ -1,0 +1,6 @@
+node_modules
+dist
+.env
+mongodb-bin
+mongodb-data
+mongodb-macos-x86_64-*.tgz
