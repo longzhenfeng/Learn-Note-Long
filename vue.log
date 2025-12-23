@@ -1,0 +1,15 @@
+
+> learn-note-long@ vue:dev /Users/mac/Desktop/learnProject/Learn-Note-Long
+> pnpm --filter vue-app dev
+
+
+> vue-app@0.0.0 dev /Users/mac/Desktop/learnProject/Learn-Note-Long/packages/vue-app
+> vite --port 3001 --host
+
+
+  VITE v5.4.21  ready in 322 ms
+
+  ➜  Local:   http://localhost:3001/
+  ➜  Network: http://172.18.38.235:3001/
+  ➜  Network: http://198.18.0.1:3001/
+  ➜  press h + enter to show help
