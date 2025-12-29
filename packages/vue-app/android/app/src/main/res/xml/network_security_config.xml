@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- 开发环境：允许 HTTP -->
+    <domain-config cleartextTrafficPermitted="true">
+        <!-- 本地开发地址 -->
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">10.0.2.2</domain>  <!-- 模拟器 -->
+        <domain includeSubdomains="true">192.168.1.100</domain>  <!-- 你的局域网 IP -->
+        <domain includeSubdomains="true">192.168.233.66</domain>  <!-- 你图中的 IP -->
+
+        <!-- 允许任意 IP（开发时方便） -->
+        <domain includeSubdomains="true">192.168.0.0/16</domain>
+        <domain includeSubdomains="true">10.0.0.0/8</domain>
+    </domain-config>
+
+    <!-- 生产环境配置（可选） -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

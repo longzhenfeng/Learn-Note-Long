@@ -10,5 +10,8 @@
     "vue:dev": "pnpm --filter vue-app dev",
     "db:start": "pnpm --filter express-app run db:start",
     "db:view": "pnpm --filter express-app run db:view"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   }
 }

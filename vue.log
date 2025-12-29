@@ -13,3 +13,6 @@
   ➜  Network: http://172.18.38.235:3001/
   ➜  Network: http://198.18.0.1:3001/
   ➜  press h + enter to show help
+/Users/mac/Desktop/learnProject/Learn-Note-Long/packages/vue-app:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  vue-app@0.0.0 dev: `vite --port 3001 --host`
+Command failed with signal "SIGHUP"
