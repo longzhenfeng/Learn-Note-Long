@@ -1,14 +1,26 @@
-import mongoose from 'mongoose';
+import mysql from 'mysql2/promise';
+
+const pool = mysql.createPool({
+  host: process.env.DB_HOST || 'localhost',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || 'feng224318',
+  database: process.env.DB_NAME || 'express-app',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+});
 
 const connectDB = async (): Promise<void> => {
   try {
-    const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/express-app';
-    await mongoose.connect(mongoUri);
-    console.log('✅ MongoDB connected successfully');
+    const connection = await pool.getConnection();
+    await connection.ping();
+    connection.release();
+    console.log('✅ MySQL connected successfully');
   } catch (error) {
-    console.error('❌ MongoDB connection error:', error);
+    console.error('❌ MySQL connection error:', error);
     process.exit(1);
   }
 };
 
 export default connectDB;
+export { pool };

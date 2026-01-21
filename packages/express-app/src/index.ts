@@ -3,6 +3,7 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import connectDB from './config/database';
 import userRoutes from './routes/userRoutes';
+import adminArticleRoutes from './routes/admin/article';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,6 +24,8 @@ app.get('/api/health', (_req: Request, res: Response) => {
 
 // 用户模块路由
 app.use('/api/users', userRoutes);
+// 管理后台文章模块路由
+app.use('/api/admin/articles', adminArticleRoutes);
 
 // 连接数据库并启动服务器
 const startServer = async () => {

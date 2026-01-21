@@ -1,0 +1,38 @@
+services:
+  mysql:
+    image: mysql:8.3.0
+    # 注意：这里的参数行末尾不要加注释，所有注释单独写在command外
+    command: >
+      mysqld 
+      --character-set-server=utf8mb4 
+      --collation-server=utf8mb4_general_ci 
+      --default-authentication-plugin=mysql_native_password
+      --wait_timeout=300
+      --interactive_timeout=300
+      --require_secure_transport=OFF
+      --connect_timeout=30
+    environment:
+      - MYSQL_ROOT_PASSWORD=feng224318
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_LOWER_CASE_TABLE_NAMES=0
+      - TZ=Asia/Shanghai
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p$$MYSQL_ROOT_PASSWORD"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    volumes:
+      - mysql-data:/var/lib/mysql
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+
+volumes:
+  mysql-data:
+    driver: local
