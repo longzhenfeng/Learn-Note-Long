@@ -11,6 +11,6 @@
     "rootDir": "./src",
     "declaration": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "sequelize.config.ts", "migrations/**/*", "seeders/**/*", "models/**/*"],
   "exclude": ["node_modules", "dist"]
 }

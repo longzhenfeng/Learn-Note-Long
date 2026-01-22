@@ -8,7 +8,7 @@ export default (sequelize: any, DataTypes: any) => {
       type: DataTypes.TEXT
     }
   }, {
-    tableName: 'articles'
+    tableName: 'Articles'
   })
 
   return Article

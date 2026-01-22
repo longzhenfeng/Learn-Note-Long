@@ -1,12 +1,12 @@
 import { Router } from 'express'
-import { Article } from '../../models/index.js'
+import db from '../../../models/index'
 
 const router = Router()
 
 // 获取文章列表
 router.get('/', async (_req, res) => {
   try {
-    const list = await Article.findAll()
+    const list = await db.Article.findAll()
 
     res.json({
       success: true,

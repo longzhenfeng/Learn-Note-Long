@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import Sequelize from 'sequelize'
 import { fileURLToPath } from 'url'
-import configFile from '../config/config.json' assert { type: 'json' }
+import configFile from '../config/config.json'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename)
 const env = process.env.NODE_ENV || 'development'
 const config = configFile[env]
 
-const db = {}
+const db: any = {}
 
 let sequelize:any
 if (config.use_env_variable) {
@@ -31,7 +31,8 @@ fs.readdirSync(__dirname)
     return (
       file.indexOf('.') !== 0 &&
       file !== basename &&
-      (file.endsWith('.js') || file.endsWith('.cjs')) &&
+      (file.endsWith('.ts') || file.endsWith('.js')) &&
+      !file.endsWith('.test.ts') &&
       !file.endsWith('.test.js')
     )
   })
