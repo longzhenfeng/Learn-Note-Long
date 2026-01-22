@@ -22,3 +22,13 @@ export const UserService = {
   update: (id: string, data: Partial<Omit<User, 'id'>>) => api.put(`/users/${id}`, data),
   delete: (id: string) => api.delete(`/users/${id}`),
 };
+
+export interface Article {
+  id: string;
+  title: string;
+  content: string;
+}
+
+export const ArticleService = {
+  getAll: () => api.get<{ data: Article[] }>('/admin/articles'),
+};

@@ -27,6 +27,13 @@ export default defineConfig({
         items: [
           { text: 'Node JS是什么?', link: '/nodejs/what-is-node' }
         ]
+      },
+      {
+        text: 'Express',
+        items: [
+          { text: 'Express是什么?', link: '/expressjs/what-is-express' },
+          { text: '路由', link: '/expressjs/router' },
+        ]
       }
     ],
 

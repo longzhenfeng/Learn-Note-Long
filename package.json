@@ -14,5 +14,9 @@
     "vue:dev": "pnpm --filter vue-app dev",
     "db:start": "pnpm --filter express-app run db:start",
     "db:view": "pnpm --filter express-app run db:view"
+  },
+  "dependencies": {
+    "vue-router": "^4.6.4",
+    "vuex": "^4.1.0"
   }
 }
