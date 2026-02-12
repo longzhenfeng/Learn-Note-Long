@@ -5,6 +5,9 @@ export default defineConfig({
   base: '/Learn-Note-Long/',
   title: "Learn Note Long",
   description: "Learn Note ",
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/Learn-Note-Long/favicon.svg' }]
+  ],
   markdown: {
     lineNumbers: true,
   },
