@@ -34,6 +34,16 @@ export default defineConfig({
           { text: 'Express是什么?', link: '/expressjs/what-is-express' },
           { text: '路由', link: '/expressjs/router' },
         ]
+      },
+      {
+        text: 'Vite',
+        items: [
+          { text: 'Vite是什么?', link: '/vite/what-is-vite' },
+          { text: '配置技巧', link: '/vite/config-tips' },
+          { text: '开发技巧', link: '/vite/development-tips' },
+          { text: '构建优化', link: '/vite/build-tips' },
+          { text: '常见问题', link: '/vite/common-issues' },
+        ]
       }
     ],
 
