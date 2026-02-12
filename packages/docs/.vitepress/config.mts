@@ -25,7 +25,11 @@ export default defineConfig({
       {
         text: 'Node JS',
         items: [
-          { text: 'Node JS是什么?', link: '/nodejs/what-is-node' }
+          { text: 'Node JS是什么?', link: '/nodejs/what-is-node' },
+          { text: '异步编程', link: '/nodejs/async-programming' },
+          { text: 'HTTP模块', link: '/nodejs/http-module' },
+          { text: 'Stream和Buffer', link: '/nodejs/stream-buffer' },
+          { text: '模块系统', link: '/nodejs/module-system' },
         ]
       },
       {
