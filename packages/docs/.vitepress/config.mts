@@ -33,6 +33,11 @@ export default defineConfig({
         items: [
           { text: 'Express是什么?', link: '/expressjs/what-is-express' },
           { text: '路由', link: '/expressjs/router' },
+          { text: '中间件', link: '/expressjs/middleware' },
+          { text: '错误处理', link: '/expressjs/error-handling' },
+          { text: '身份验证', link: '/expressjs/authentication' },
+          { text: '数据库集成', link: '/expressjs/database' },
+          { text: '文件上传', link: '/expressjs/file-upload' },
         ]
       },
       {
