@@ -5,21 +5,39 @@ layout: home
 hero:
   name: "Learn Note Long"
   text: "全栈开发学习笔记"
-  tagline: 记录 Node.js、Express 和 Vite 的学习历程
+  tagline: 记录 Node.js、Express 和 Vite 的学习历程 🚀
+  image:
+    src: /logo.svg
+    alt: Learn Note Long
   actions:
     - theme: brand
-      text: 开始学习
+      text: 开始学习 →
       link: /nodejs/what-is-node
     - theme: alt
       text: 查看示例
       link: /api-examples
 
 features:
-  - title: Node.js 基础
+  - icon: 🟢
+    title: Node.js 基础
     details: 深入学习 Node.js 核心概念，包括异步编程、HTTP 模块、Stream 和模块系统等
-  - title: Express 框架
+    link: /nodejs/what-is-node
+  - icon: ⚡
+    title: Express 框架
     details: 掌握 Express 路由、中间件、错误处理、身份验证和数据库集成等实战技能
-  - title: Vite 构建工具
+    link: /expressjs/what-is-express
+  - icon: ⚙️
+    title: Vite 构建工具
     details: 了解 Vite 配置技巧、开发优化和构建最佳实践，提升开发效率
+    link: /vite/what-is-vite
+  - icon: 📚
+    title: 持续更新
+    details: 文档持续更新中，涵盖前端和后端开发的各个方面
+  - icon: 💡
+    title: 实战案例
+    details: 包含大量实际项目中的代码示例和最佳实践
+  - icon: 🎯
+    title: 简洁明了
+    details: 重点突出，去繁就简，快速掌握核心知识点
 ---
 

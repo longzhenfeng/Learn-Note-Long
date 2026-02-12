@@ -1,0 +1,175 @@
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/**
+ * Colors - Light Mode
+ * -------------------------------------------------------------------------- */
+
+:root {
+  /* Brand colors - Cyber Wave 青色 */
+  --vp-c-brand-1: #00e5ff;
+  --vp-c-brand-2: #00bcd4;
+  --vp-c-brand-3: #0097a7;
+  --vp-c-brand-soft: rgba(0, 229, 255, 0.14);
+
+  /* Background colors - 浅色模式 */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f5f5f5;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #e8f4f8;
+
+  /* Text colors */
+  --vp-c-text-1: #1a1d24;
+  --vp-c-text-2: #4a5568;
+  --vp-c-text-3: #718096;
+
+  /* Border colors */
+  --vp-c-border: #e0e0e0;
+  --vp-c-divider: #eeeeee;
+  --vp-c-gutter: #f5f5f5;
+
+  /* Hero gradient - Cyber Wave 渐变 */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #00e5ff 0%, #00bcd4 100%);
+
+  /* Backdrop */
+  --vp-backdrop-bg-color: rgba(255, 255, 255, 0.85);
+}
+
+/**
+ * Colors - Dark Mode
+ * -------------------------------------------------------------------------- */
+
+.dark {
+  /* Brand colors - Cyber Wave 靓光青色 */
+  --vp-c-brand-1: #00e5ff;
+  --vp-c-brand-2: #00bcd4;
+  --vp-c-brand-3: #0097a7;
+  --vp-c-brand-soft: rgba(0, 229, 255, 0.18);
+
+  /* Background colors - Cyber Wave 深蓝绿色背景 */
+  --vp-c-bg: #0a1e28;
+  --vp-c-bg-alt: #0d2433;
+  --vp-c-bg-elv: #102a3d;
+  --vp-c-bg-soft: #143547;
+
+  /* Text colors - 青色色调的文字 */
+  --vp-c-text-1: #e0f7fa;
+  --vp-c-text-2: #b2ebf2;
+  --vp-c-text-3: #80deea;
+
+  /* Border colors */
+  --vp-c-border: #1a3a4a;
+  --vp-c-divider: #204555;
+  --vp-c-gutter: #255060;
+
+  /* Hero gradient - Cyber Wave 渐变 */
+  --vp-home-hero-name-background: linear-gradient(120deg, #00e5ff 0%, #00bcd4 50%, #0097a7 100%);
+
+  /* Backdrop */
+  --vp-backdrop-bg-color: rgba(10, 30, 40, 0.95);
+}
+
+/**
+ * Component: Custom Animations & Effects
+ * -------------------------------------------------------------------------- */
+
+/* Feature cards hover effect */
+.VPFeature {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
+}
+
+.VPFeature:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 229, 255, 0.25);
+}
+
+.dark .VPFeature:hover {
+  box-shadow: 0 12px 32px rgba(0, 229, 255, 0.4), 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+/* Hero image animation */
+.VPImage.image-src {
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(0, 229, 255, 0.3));
+}
+
+.dark .VPImage.image-src {
+  filter: drop-shadow(0 4px 20px rgba(0, 229, 255, 0.6)) drop-shadow(0 0 30px rgba(0, 229, 255, 0.3));
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px);
+  }
+  50% { 
+    transform: translateY(-10px);
+  }
+}
+
+/* Smooth page background */
+.VPContent {
+  background: var(--vp-c-bg);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand-2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-1);
+}
+
+/* Code blocks styling */
+.vp-doc div[class*='language-'] {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dark .vp-doc div[class*='language-'] {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Links with smooth transition */
+.vp-doc a {
+  transition: color 0.2s ease;
+}
+
+/* Navbar glass effect */
+.VPNav {
+  backdrop-filter: blur(10px);
+  background-color: var(--vp-backdrop-bg-color) !important;
+}
+
+/* Sidebar smooth styling */
+.VPSidebar {
+  background-color: var(--vp-c-bg-soft);
+}
+
+/* Button hover effects */
+.VPButton {
+  transition: all 0.3s ease;
+}
+
+.VPButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 229, 255, 0.4);
+}
+
+.dark .VPButton:hover {
+  box-shadow: 0 4px 16px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.2);
+}
