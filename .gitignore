@@ -2,3 +2,6 @@ node_modules
 yarn.lock
 pnpm-lock.yaml
 Learn-Note-Long.wiki/
+
+# Turbo
+.turbo
