@@ -9,6 +9,8 @@ import { RouterLink, RouterView } from 'vue-router';
       <RouterLink to="/" class="nav-link">用户管理</RouterLink>
       <!-- 文章列表按钮 -->
       <RouterLink to="/articles" class="nav-link">文章列表</RouterLink>
+      <!-- 测试功能 -->
+      <RouterLink to="/test" class="nav-link">测试功能</RouterLink>
     </header>
     <main class="content">
       <RouterView />

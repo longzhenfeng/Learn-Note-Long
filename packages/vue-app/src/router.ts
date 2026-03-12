@@ -14,6 +14,11 @@ const routes: RouteRecordRaw[] = [
     name: 'articles',
     component: ArticleView,
   },
+  {
+    path: '/test',
+    name: 'test',
+    component: () => import('./views/TestView.tsx'),
+  }
 ];
 
 const router = createRouter({
